@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Arkadaş Sayı Kontrol</h2>
+    <script>
+        function findFriendsNumbers(number1,number2) {
+            let tmpNumber1=0, tmpNumber2=0;
+            for (let i = 1; i < number1; i++) {
+                if(number1%i==0){
+                    tmpNumber1+=i;
+                }
+            }
+            for (let i = 1; i < number2; i++) {
+                if(number2%i==0) {
+                    tmpNumber2+=i;
+                }
+            }
+            if(number1==tmpNumber2 && number2==tmpNumber1) {
+                console.log(`Parametre olarak gelen ${number1} ve ${number2} arkadaş sayıdır.`)
+            } else {
+                console.log(`Parametre olarak gelen ${number1} ve ${number2} arkadaş sayı değildir.`)
+            }
+        }
+        findFriendsNumbers(220,284)
+        findFriendsNumbers(200,300)
+    </script>
+</body>
+</html>

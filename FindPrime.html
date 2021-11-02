@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Asal Sayı Kontrol</h2>
+    <script>
+        function findPrime(...numbers) {
+            for (let i = 0; i < numbers.length; i++) {
+                if (isPrime(numbers[i])) {
+                    console.log(`Diziden gelen ${numbers[i]} sayısı asal sayıdır.`)
+                } else {
+                    console.log(`Diziden gelen ${numbers[i]} sayısı asal sayı değildir.`)
+                }
+            }
+        }
+
+        function isPrime(number) {
+            let tmp = 0;
+            for (let i = 2; i < number; i++) {
+                if (number % i == 0) {
+                    tmp++;
+                }
+            }
+            if (tmp == 0) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+        findPrime(5, 7, 9, 11, 12)
+    </script>
+</body>
+
+</html>
